@@ -1,0 +1,33 @@
+def school_admission():
+    print("=== Welcome to the School Admission System ===")
+    
+    # Collect student information
+    name = input("Enter student's name: ")
+    age = int(input("Enter student's age: "))
+    email = input("Enter student's email: ")
+    grade = input("Enter grade applying for: ")
+    
+    # Validate age and grade (basic logic)
+    if age < 4:
+        print("Sorry, the student is too young for admission.")
+        return
+    elif age > 18:
+        print("Sorry, the student exceeds the age limit for school admission.")
+        return
+    
+    # Generate admission ID
+    import random
+    admission_id = "ADM" + str(random.randint(1000, 9999))
+    
+    # Display admission confirmation
+    print("\n--- Admission Application Submitted ---")
+    print(f"Admission ID: {admission_id}")
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Email: {email}")
+    print(f"Grade Applied For: {grade}")
+    print("Status: Pending Review")
+    print("---------------------------------------")
+
+
+school_admission()
